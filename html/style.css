@@ -1,0 +1,30 @@
+.menubar ul {
+                background: #3a4f63;
+                padding: 20px;
+            }
+.menubar ul li{
+                background: #465c71;
+                padding: 5px;
+                display: inline;
+            }
+.menubar ul li:hover {
+                background: #bfcdb6;
+            }
+.menubar ul li a:link {
+                color: #dde4ec;
+                text-decoration: none;
+            }
+.menubar ul li a:hover {
+                color: #465c71;
+            }
+.table table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    border: solid 1px, black;
+    width: 100%;
+}
+.table td,th{
+    border: solid 1px, #dddddd;
+    text-align: left;
+    padding: 10px;
+}
