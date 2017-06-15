@@ -2,6 +2,7 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="style.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <title>Exercise1</title>
     </head>
     <body>
@@ -14,30 +15,47 @@
                     <th>Action</th>
                 </tr>
                 <tr>
-                    <td>1</td>
-                    <td>Son Vu</td>
-                    <td>Tu Dai Ac Nhan</td>
-                    <td><button type="button" name="show">Show</button></td>
+                    <td id="id1">1</td>
+                    <td id="name1">Son Vu</td>
+                    <td id="group1">Tu Dai Ac Nhan</td>
+                    <td><button type="button" id ="btnshow1" name="btnshow1">Show</button></td>
                 </tr>
                 <tr>
-                    <td>2</td>
-                    <td>Nhan Hoang</td>
-                    <td>Tu Dai Ac Nhan</td>
-                    <td><button type="button" name="show">Show</button></td>
+                    <td id="id2">2</td>
+                    <td id="name2">Nhan Hoang</td>
+                    <td id="group2">Tu Dai Ac Nhan</td>
+                    <td><button type="button" id ="btnshow2" name="btnshow2">Show</button></td>
                 </tr>
                 <tr>
-                    <td>3</td>
-                    <td>Anh Le</td>
-                    <td>Tam Ninh Huyen Thoai</td>
-                    <td><button type="button" name="show">Show</button></td>
+                    <td id="id3">3</td>
+                    <td id="name3">Anh Le</td>
+                    <td id="group3">Tam Ninh Huyen Thoai</td>
+                    <td><button type="button" id ="btnshow3" name="btnshow3">Show</button></td>
                 </tr>
                 <tr>
-                    <td>4</td>
-                    <td>Phuc Pham</td>
-                    <td>Tam Ninh Huyen Thoai</td>
-                    <td><button type="button" name="show">Show</button></td>
+                    <td id="id4">4</td>
+                    <td id="name4">Phuc Pham</td>
+                    <td id="group4">Tam Ninh Huyen Thoai</td>
+                    <td><button type="button" id ="btnshow4" name="btnshow4">Show</button></td>
                 </tr>
             </table>
         </div>
     </body>
+    <script>
+        $(document).ready(function(){
+            $("#btnshow1").click(function(){
+                alert("Information\n\nID: "+ $("#id1").text() + "\nName: " + $("#name1").text() + "\nGroup: "+$("#group1").text());
+            });
+            $("#btnshow2").click(function(){
+                alert("Information\n\nID: "+ $("#id2").text() + "\nName: " + $("#name2").text() + "\nGroup: "+$("#group2").text());
+            });
+            $("#btnshow3").click(function(){
+                alert("Information\n\nID: "+ $("#id3").text() + "\nName: " + $("#name3").text() + "\nGroup: "+$("#group3").text());
+            });
+            $("#btnshow4").click(function(){
+                alert("Information\n\nID: "+ $("#id4").text() + "\nName: " + $("#name4").text() + "\nGroup: "+$("#group4").text());
+            });
+        });
+    </script>
+    
 </html>
