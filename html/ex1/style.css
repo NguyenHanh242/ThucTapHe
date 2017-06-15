@@ -15,7 +15,7 @@ li a, .dropbtn {
     color: #dde4ec;
     text-decoration: none;
 }
-li a:hover, .dropdown:hover {
+li a:hover, .dropdown:hover .dropbtn {
     color: #465c71;
     background-color: #bfcdb6;
 }
