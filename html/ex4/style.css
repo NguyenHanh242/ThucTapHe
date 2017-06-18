@@ -1,0 +1,17 @@
+form {
+    width: 300px;
+    border: solid 1px black;
+    padding: 10px;
+    margin: 20px;
+}
+.col2 {
+    margin-left: 20px;
+    width: 180px;
+}
+
+.form-show {
+    width: 250px;
+    margin: 15px;
+    padding: 10px;
+    border-top: solid 1px black;
+}

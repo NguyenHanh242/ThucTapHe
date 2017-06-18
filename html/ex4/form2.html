@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <title>Exercise4</title>
+    </head>
+    <body>
+        <form id="myForm">
+            <table>
+                <tr>
+                    <div>
+                        <td><label>First name: </label></td>
+                        <td><input type="text" id="firstname" name="firstname" class="col2"/></td>
+                    </div>
+                </tr>
+                <tr>
+                    <div>
+                        <td><label>Last name: </label></td>
+                        <td><input type="text" id="lastname" name="lastname" class="col2"/></td>
+                    </div>
+                </tr>
+                <tr>
+                    <div>
+                        <td><label>Gender: </label></td>
+
+                        <td><div class="col2">
+                            <input type="radio" id="genderMale" name="gender" value="male"/>Male
+                            <input type="radio" id="genderFemale" name="gender" value="female"/>Female
+                            </div>
+                        </td>
+                    </div>
+                </tr>
+                <tr>
+                    <div>
+                        <td><label>Nationality: </label></td>
+                        <td><select name="nationality" class="col2">
+                            <option value="australia">Australia</option>
+                            <option value="singapore">Singapore</option>
+                            <option value="unitedState">United State</option>
+                            <option value="vietNam">Viet Nam</option>
+                            </select>
+                        </td>
+                    </div>
+                </tr>
+            </table>
+            <table class="form-show">
+                <tr>
+                    <td>Fullname: </td>
+                    <td id="fullname"></td>
+                </tr>
+                <tr>
+                    <td>Gender:</td>
+                    <td id="gender-show"></td>
+                </tr>
+                <tr>
+                    <td>Nationality</td>
+                    <td id="nationality-show"></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+    <script>
+        $(document).ready(function(){
+            $("#firstname").change(function(){
+               var fn= document.getElementById('firstname').value;
+               if ( document.getElementById('lastname').value != null ) {
+                    $("#fullname").text(fn+" "+document.getElementById('lastname').value);
+               }
+                 
+            });
+            $("#lastname").change(function(){
+                var ln = document.getElementById('lastname').value;
+                 if ( document.getElementById('firstname').value != null ) {
+                    $("#fullname").text(document.getElementById('firstname').value +" "+ln);
+               }
+            });
+            // $("#gender").click(function(){
+            //    var gender = $('input[name=gender]', '#myForm').val()
+
+
+            //      alert(this.value);
+            // })
+
+            $('#genderMale').click(function () {
+                if ($(this).is(':checked')) {
+                    $("#gender-show").text(this.value);
+                    //alert(this.value);
+                }
+            });
+
+            $('#genderFemale').click(function () {
+                if ($(this).is(':checked')) {
+                    $("#gender-show").text(this.value);
+                    // alert(this.value);
+                }
+            });
+
+        });
+    </script>
+</html>

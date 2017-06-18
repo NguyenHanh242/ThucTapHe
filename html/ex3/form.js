@@ -3,6 +3,7 @@ $(function(){
         dateFormat: 'dd/mm/yy'
     }).val();
 
+    
     $("#form-infor").validate({
         rules: {
             firstname: {
@@ -23,7 +24,7 @@ $(function(){
             },
             phonenumber: {
                 required: true,
-                pattern: "^\d+84\d{10}$",
+                pattern: "^+84\d{10}$",
                 maxlength: 13,
                 minlength:12
             }
