@@ -34,11 +34,11 @@
                 <tr>
                     <div>
                         <td><label>Nationality: </label></td>
-                        <td><select name="nationality" class="col2">
-                            <option value="australia">Australia</option>
-                            <option value="singapore">Singapore</option>
-                            <option value="unitedState">United State</option>
-                            <option value="vietNam">Viet Nam</option>
+                        <td><select id="nationality" class="col2">
+                                <option value="Australia">Australia</option>
+                                <option value="Singapore">Singapore</option>
+                                <option value="UnitedState">United State</option>
+                                <option value="VietNam">Viet Nam</option>
                             </select>
                         </td>
                     </div>
@@ -63,24 +63,19 @@
     <script>
         $(document).ready(function(){
             $("#firstname").change(function(){
-               var fn= document.getElementById('firstname').value;
-               if ( document.getElementById('lastname').value != null ) {
-                    $("#fullname").text(fn+" "+document.getElementById('lastname').value);
+               var fn= $("#firstname").val();
+               alert("Aaa: "+fn)
+               if ( $("#lastname").val() != null ) {
+                    $("#fullname").text(fn+" "+$("#lastname").val());
                }
                  
             });
             $("#lastname").change(function(){
-                var ln = document.getElementById('lastname').value;
-                 if ( document.getElementById('firstname').value != null ) {
-                    $("#fullname").text(document.getElementById('firstname').value +" "+ln);
+                var ln = $('#lastname').val();
+                 if ( $('#firstname').val() != null ) {
+                    $("#fullname").text($('#firstname').val() +" "+ln);
                }
             });
-            // $("#gender").click(function(){
-            //    var gender = $('input[name=gender]', '#myForm').val()
-
-
-            //      alert(this.value);
-            // })
 
             $('#genderMale').click(function () {
                 if ($(this).is(':checked')) {
@@ -92,9 +87,13 @@
             $('#genderFemale').click(function () {
                 if ($(this).is(':checked')) {
                     $("#gender-show").text(this.value);
-                    // alert(this.value);
                 }
             });
+            $("#nationality").change(function(){
+                var x = $("#nationality option:selected").text();
+                $("#nationality-show").text(x);
+                 //alert(document.getElementsByTagName("option")[x].text);
+            })
 
         });
     </script>

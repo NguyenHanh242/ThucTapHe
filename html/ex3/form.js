@@ -3,6 +3,11 @@ $(function(){
         dateFormat: 'dd/mm/yy'
     }).val();
 
+    $.validator.addMethod("sodienthoai",function(value, element){
+        var filter = /^[0-9-+]+$/;
+        if(filter.test(value)) return true;
+        else return false;
+    })
     
     $("#form-infor").validate({
         rules: {
@@ -24,9 +29,9 @@ $(function(){
             },
             phonenumber: {
                 required: true,
-                pattern: "^+84\d{10}$",
+                sodienthoai: true,
                 maxlength: 13,
-                minlength:12
+                minlength:10
             }
         },
         messages: {
@@ -46,9 +51,9 @@ $(function(){
             startday: "Please enter your startday",
             phonenumber: {
                 required: "Please enter your phone",
-                pattern: "Must be equal +84....",
+                sodienthoai: "Must be equal +....",
                 maxlength: "Max length of phone is 13",
-                minlength: "Min length of phone is 12"
+                minlength: "Min length of phone is 10"
             }
         },
         submitHandler: function(form){
