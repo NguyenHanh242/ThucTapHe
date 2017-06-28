@@ -1,0 +1,46 @@
+body {
+	font-family: 'Open Sans', sans-serif;	
+}
+.header-area {
+	position: relative;
+}
+.header-area .container {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	z-index: 2;
+}
+.slider-area {
+	position: relative;
+}
+.slider-area::before{
+	position: absolute;
+	content: "";
+	left: 0;
+	top: 0;
+	background-color: #000;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	opacity: .5;
+}
+.menu-area ul.nav li:hover a, .menu-area ul.nav li.active a {
+		background-color: #DD374D;
+}
+.menu-area ul.nav li a {
+	color: #fff;
+	text-transform: uppercase;
+	padding-top: 40px;
+	padding-left: 20px;
+	padding-right: 20px;
+	font-size: 13px;
+	margin: 0 5px;
+}
+header-top:{
+	line-height: 85px;
+	height: 85px;
+}
+.logo {
+	padding-top: 20px;
+}
