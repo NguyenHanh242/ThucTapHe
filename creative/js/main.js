@@ -3,11 +3,11 @@ jQuery(function($){
 	//portfolio filter
 	$(window).load(function() {
 		
-		var $portfolio_selectors = $('.portfolio-filter >li>a');
+		var $portfolio_selectors = $('.portfolio-filter>li>a');
 
 		if ($portfolio_selectors.length) {
 
-			var portfolios = $('.portfolio-items');
+			var $portfolios = $('.portfolio-items');
 			$portfolios.isotope({
 				itemSelector: '.portfolio-item',
 				layoutMode: 'fitRows'
@@ -16,8 +16,8 @@ jQuery(function($){
 			$portfolio_selectors.on('click', function() {
 				$portfolio_selectors.removeClass('active');
 				$(this).addClass('active');
-				var selector = $(this).attr('data-filter');
-				$portfolio.isotope({ filter: selector });
+				var selectors = $(this).attr('data-filter');
+				$portfolios.isotope({ filter: selectors });
 				return false;
 			});
 		}
