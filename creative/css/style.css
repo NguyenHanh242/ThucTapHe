@@ -1,3 +1,6 @@
+a:focus {
+	outline: none !important;
+}
 body {
 	font-family: 'Open Sans', sans-serif;	
 }
@@ -207,4 +210,209 @@ body {
 	text-transform: uppercase;
 	padding-bottom: 20px;
 	font-size: 30px;
+}
+.tabs-area ul.nav li a{
+	border-radius: 0;
+	padding-left: 73px;
+	padding-right: 73px;
+	border: 1px solid #ddd;
+	font-size: 14px;
+	color: #868585;
+	margin: 0;
+}
+.tabs-area ul.nav li.active a, .tabs-area ul.nav li:hover a {
+	border-bottom: 0px solid transparent;
+	border-top: 2px solid #dd374d;
+	background-color: #fff;
+}
+.tab-content {
+	border: 1px solid #ddd;
+	border-top: none;
+	padding: 23px;
+}
+.single-tab p {
+	color: #868585;
+	font-size: 14px;
+}
+.tab-services {
+	margin-top: 30px;
+}
+.singleTab-service h3 {
+	color: #868585;
+	font-size: 16px;
+}
+.singleTab-service i {
+	color: #dd374d;
+	font-size: 25px;
+  border: 1px solid #ddd;
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	padding: 24px 17px;
+	background-color: #ddd;
+}
+.singleTab-service i:hover {
+	color: #fff;
+	background-color: #dd374d;
+	border-color: #dd374d; 
+}
+
+.our-progess h2 {
+	font-size: 30px;
+	text-transform: uppercase;
+	color: #252525;
+	padding-bottom: 15px
+}
+.our-progess p {
+	color: #868585;
+	font-size: 14px;
+}
+.ourProgess-bar {
+	margin-top: 30px; 
+}
+.single-title {
+	margin-bottom: 4px;
+}
+.single-title span {
+	color: #868585;
+}
+.single-title span:last-child {
+	float: right;
+}
+.progress {
+	height: 7px;
+}
+.worksTitle-area {
+	background-color: #EEEEEE;
+	padding: 70px 0;
+}
+.works-title h1 {
+	text-transform: uppercase;
+	font-size: 30px;
+	color: #434343;
+}
+.works-title p {
+	color: #434343;
+	font-size: 13px;
+}
+.work-icon{
+	margin: 15px;
+}
+.work-icon i{
+	position: relative;
+	color: #dd374d;
+	font-size: 11px;
+	border: 1px solid #868585;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	padding: 6px 6px;
+}
+.work-icon::before {
+	content: "";
+	position: absolute;
+	height: 1px;
+	left: 0;
+	top: 60%;
+	width: 48%;
+	background-color: #868585;
+} 
+.work-icon::after{
+	content: "";
+	position: absolute;
+	height: 1px;
+	right:0;
+	top: 60%;
+	width: 48%;
+	background-color: #868585;
+}
+.portfolio-area {
+  padding: 50px 0;
+}
+.portfolio ul.portfolio-filter {
+	list-style: none;
+}
+.portfolio ul.portfolio-filter li {
+	display: inline-block;
+	padding-bottom: 30px;
+}
+.portfolio ul.portfolio-filter li span{
+	font-weight: 700;
+}
+.portfolio ul.portfolio-filter li:last-child span {
+	display: none;
+}
+.portfolio ul.portfolio-filter li a{
+	font-style: italic;
+	color: #555555;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.portfolio ul.portfolio-filter li:hover a,
+.portfolio ul.portfolio-filter li.active a {
+	color: #dd374d;
+	text-decoration: underline;
+}
+.counter-area {
+	padding: 50px 0;
+}
+.single-counter h5{
+	font-style: italic;
+	color: #dd374d;
+	padding-top: 10px;
+	font-size: 13px;
+	font-weight: 500;
+}
+.single-counter img {
+	
+}
+.single-counter span{
+	font-size: 45px;
+	font-weight: 700;
+	color: #555
+}
+.getTouch-area {
+	background-color: #dd374d;
+	padding-top: 50px;
+}
+.get-touch h1{
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 25px;
+	font-weight: 600;
+}
+.get-touch p {
+	color: #fff;
+	font-size: 13px;
+}
+.touch-icon{
+	margin: 10px;
+}
+.touch-icon i {
+  position: relative;
+	color: #fff;
+	font-size: 15px;
+	border: 1px solid #fff;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	padding: 3px 3px;
+}
+.touch-icon::before{
+  content: "";
+	position: absolute;
+	height: 1px;
+	left: 0;
+	top: 50%;
+	width: 48%;
+	background-color: #fff;
+}
+.touch-icon::after{
+	content: "";
+	position: absolute;
+	right: 0;
+	top: 50%;
+	height: 1px;
+	background-color: #fff;
+	width: 48%;
 }
