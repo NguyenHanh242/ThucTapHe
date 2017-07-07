@@ -9,6 +9,7 @@ $(function(){
         else return false;
     })
     
+
     $("#form-infor").validate({
         rules: {
             firstname: {

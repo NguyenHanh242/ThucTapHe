@@ -1,5 +1,5 @@
 <?php
-    include "bean.php"; 
+    require_once 'bean.php'; 
 
     function connectDb(){
         $servername = "localhost";
@@ -17,23 +17,6 @@
             return $conn;
         }
     }
-
-    // function getData($query){
-    //     $conn = null;
-    //     $st = null;
-    //     try {
-    //         $conn = connectDb();
-    //         $st = $conn->prepare($query);
-    //         $obj = new Object();
-    //         $st = setFetchMode(PDO::FETCH_INTO, $obj);
-    //         $st = execute();
-    //     } catch (PDOException $e){
-    //         echo "<script>console.log('[ERROR]\t" . $e->getMessage()."')</script>";
-    //     } finally {
-    //         $conn = null;
-    //         return $st;
-    //     }
-    // }
     function getData($sqlStr){
         $conn= null;
         $stmt= null;
@@ -51,6 +34,15 @@
             $conn= null;
             return $stmt;
         }
+    }
+
+    function login_user($username, $password){
+        $data = getData("select * from user where username = '$username' and password = '$password'");
+        $user = null;
+        foreach($data as $obj){
+            $user = $obj;
+        }
+        return $user;
     }
     
 ?>
