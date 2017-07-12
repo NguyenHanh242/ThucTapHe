@@ -3,3 +3,9 @@
     padding: 10px;
     font-size: 14px;
 }
+.tooltip.top .tooltip-inner {   
+     background-color: red;
+}
+.tooltip.top .tooltip-arrow {   
+    border-top-color: red;
+}

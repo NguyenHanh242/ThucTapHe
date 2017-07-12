@@ -70,25 +70,29 @@
                 </ul>
                 <?php
                     if(!isset($_SESSION['login_user'])) {
-                        echo "<form method='post' action='do_login.php' id='formLogin' name='formLogin'         class='nav navbar-form navbar-right'>
-                                <div class='form-group'>
-                                    <input type='text' name='username' id='username' placeholder='Username' class='form-control'>
-                                </div>
-                                <div class='form-group'>
-                                    <input type='password' name='password' id='password' placeholder='Password' class='form-control'>
-                                </div>
-                                <button type='submit' class='btn btn-success'>Sign in</button>
-                            </form>";
+                ?>
+                    <form method='post' action='do_login.php' id='formLogin' name='formLogin'         class='nav navbar-form navbar-right'>
+                        <div class='form-group'>
+                            <input type='text' name='username' id='username' placeholder='Username' class='form-control'>
+
+                        </div>
+                        <div class='form-group'>
+                            <input type='password' name='password' id='password' placeholder='Password' class='form-control'>
+                        </div>
+                        <button type='submit' class='btn btn-success'>Sign in</button>
+                    </form>
+                <?php
                     } else {
                         $user = $_SESSION['login_user'];
                         $username = htmlspecialchars($user->cols["username"]);
                         $fullname = htmlspecialchars($user->cols["fullname"]);
-                        echo "<form method='post' action id='formLogout' class='nav navbar-form navbar-right'>
-                            <div class='form-group'>
-                                <label style='color:#fff'>Wellcome $fullname</label>
-                            </div>
-                            <button type='submit' class='btn btn-success'>Logout</button>
-                        </form>";
+
+                        echo "<form method='post' action='do_logout.php' id='formLogout' class='nav navbar-form navbar-right'>
+                                <div class='form-group'>
+                                    <label style='color:#fff'>Wellcome $fullname</label>
+                                </div>
+                                <button type='submit' class='btn btn-success'>Logout</button>
+                            </form>";
                     }
                 ?>
                 
