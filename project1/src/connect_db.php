@@ -36,6 +36,23 @@
         }
     }
 
+    function executeStatement($query){
+        $conn= null;
+        $count = 0;
+
+        try{
+            $conn = connectDb();
+            $stmt = $conn->prepare($query);
+            $stmt->execute();
+            $count = $stmt->rowCount();
+        } catch (PDOExeption $e){
+
+        } finally {
+            $conn = null;
+            return $count;
+        }
+    }
+
     function login_user($username, $password){
         $data = getData("select * from user where username = '$username' and password = '$password'");
         $user = null;
@@ -43,6 +60,10 @@
             $user = $obj;
         }
         return $user;
+    }
+
+    function userIsExist($id, $username){
+        return executeStatement("select * from user where id = $id and username = $username");
     }
     
 ?>
