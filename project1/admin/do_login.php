@@ -4,6 +4,7 @@
 
     $username = trim($_POST['username']);
     $password = trim($_POST['password']);
+    $password = md5($password);
 
     $login_user = login_user($username, $password);
     if($login_user){

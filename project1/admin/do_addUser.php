@@ -3,6 +3,7 @@
 
     $username = $_POST['ad_username'];
     $password = $_POST['ad_password'];
+    $password = md5($password);
     $fullname = $_POST['ad_fullname'];
 
     if(executeStatement("insert into user values (0,'$username', '$password', '$fullname')")){

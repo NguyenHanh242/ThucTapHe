@@ -28,12 +28,12 @@ $(function(){
                 required: true,
                 username_enter: true
             },
-            ad_password: {
+            adpassword: {
                 required: true,
                 minlength: 5
             },
             ad_re_password: {
-                equalTo: ad_password
+                equalTo: adpassword
             },
             ad_fullname: {
                 required: true

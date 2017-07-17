@@ -4,6 +4,7 @@
     $id = $_POST['up_id'];
     $username = $_POST['up_username'];
     $password = $_POST['up_password'];
+    $password = md5($password);
     $fullname =$_POST['up_fullname'];
 
     if(userIsExist($id, $username)){

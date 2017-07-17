@@ -22,7 +22,7 @@
             $detail = htmlspecialchars($row->cols['detail']);     
             $fullname = htmlspecialchars($row->cols['fullname']);    
         ?>
-            <header class='intro-header' style="background-image: url('<?php echo $picture_preview; ?>')">
+            <header class='intro-header' style="background-image: url('../admin/uploads/<?php echo $picture_preview; ?>')">
         <div class='container'>
             <div class='row'>
                 <div class='col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1'>

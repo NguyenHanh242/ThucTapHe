@@ -2,6 +2,13 @@
     include 'header.php';
     require_once '../src/bean.php';
     require_once '../src/connect_db.php';
+
+    if(!isset($_SESSION["login_user"])){
+        $_SESSION["errorStr"]="Please log in";
+        header("Location:../admin/login.php");
+        exit();
+    }
+
 ?>
         <div class="container-fluid">
             <div class="row">
@@ -12,7 +19,7 @@
                     <div id="inform" class="alert">
                         <strong><span class="glyphicon"></span><span></span></strong><span></span>
                     </div>
-                    <h2 class="sub-header">Section title</h2>                 
+                    <h2 class="sub-header">User</h2>                 
                     <div class="table-responsive">
                         <i class="fa fa-plus-square" style="color: green;font-size: xx-large;    padding-left: 10px;" data-toggle="modal" data-target="#addUser"></i>
                         <table class="table table-striped" id="table_user">
@@ -113,8 +120,8 @@
                                 <input type="text" class="form-control" name="ad_username" id="ad_username" value="">
                             </div>
                             <div class="form-group">
-                                <label for="ad_password">Password:</label>
-                                <input type="password" name="ad_password" id="ad_password" class="form-control" value="">
+                                <label for="adpassword">Password:</label>
+                                <input type="password" name="adpassword" id="adpassword" class="form-control" value="">
                             </div>
                             <div class="form-group">
                                 <label for="ad_re_password">Re-password:</label>
